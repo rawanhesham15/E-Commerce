@@ -1,7 +1,7 @@
 import React from 'react'
 import './NavBarStyle.css'
-// import Badge from '@material-ui/core/Badge';
-// import MailIcon from '@mui/icons-material/Mail';
+import {Badge } from '@material-ui/core';
+// import {Search , ShoppingCartOutlined} from '@material-ui/core';
 
 function NavBar(){
     // const {Badge} = require("@material-ui/core")
@@ -28,11 +28,16 @@ function NavBar(){
                     <div className='menu-items'>
                         Sign In
                     </div>
+            
                     <div className='menu-items'>
                         <span class="material-symbols-outlined">
                             shopping_cart
                         </span>
                     </div>
+                    <Badge badgeContent={4} color="primary">
+                        {/* <ShoppingCartOutlined/> */}
+                    </Badge>
+
                 </div>
             </div>
         </div>
@@ -40,3 +45,4 @@ function NavBar(){
 }
 
 export default NavBar;
+
