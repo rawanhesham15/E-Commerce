@@ -1,11 +1,9 @@
 import React from 'react'
 import './NavBarStyle.css'
 import {Badge } from '@material-ui/core';
-// import {Search , ShoppingCartOutlined} from '@material-ui/core';
+import { ShoppingCartOutlined } from '@material-ui/icons';
 
 function NavBar(){
-    // const {Badge} = require("@material-ui/core")
-    // const {ShoppingCart} = require("@material-ui/icons")
     return(
         <div className='NavBar'>
             <div className='navBar-wraper'>
@@ -30,13 +28,10 @@ function NavBar(){
                     </div>
             
                     <div className='menu-items'>
-                        <span class="material-symbols-outlined">
-                            shopping_cart
-                        </span>
+                        <Badge badgeContent={4} color="primary">
+                            <ShoppingCartOutlined/>
+                        </Badge>
                     </div>
-                    <Badge badgeContent={4} color="primary">
-                        {/* <ShoppingCartOutlined/> */}
-                    </Badge>
 
                 </div>
             </div>
