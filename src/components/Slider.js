@@ -5,8 +5,16 @@ import ArrowRightOutlined from '@mui/icons-material/ArrowRightOutlined';
 import { useAutocomplete } from '@mui/material';
 import {sliderItems} from "../data"
 import styled from 'styled-components';
+import { mobile } from "../responsive";
 
-
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  ${mobile({ display: "none" })}
+`;
 const Wrapper = styled.div`
       height: 100%;
       display: flex;
@@ -38,7 +46,7 @@ export default function Slider() {
 
 
   return (
-    <div className='Container-Slider'>
+    <Container className='Container-Slider'>
         <div className='ArrowL' onClick={()=>handleClick("left")}>
             <ArrowLeftOutlinedIcon/>
         </div>
@@ -59,6 +67,6 @@ export default function Slider() {
         <div className='ArrowR' direction="right" onClick={()=>handleClick("right")}>
             <ArrowRightOutlined/>
         </div>
-    </div>
+    </Container>
   )
 }

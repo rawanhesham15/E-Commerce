@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       {/* <Product/> */}
-      <Cart />
+      <Home />
     </div>
   );
 }
